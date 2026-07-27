@@ -6,6 +6,7 @@ import Contact from "@/pages/contact"
 import Cart from "@/pages/cart"
 import { Route, Routes } from "react-router-dom"
 import Registration from "@/pages/rejistration"
+import Undefine from "@/pages/undefine"
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Registration />} />
+        <Route path="/undefine" element={<Undefine/>}/>
       </Routes>
     </>
   )
