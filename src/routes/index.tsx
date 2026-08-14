@@ -1,3 +1,4 @@
+import MainLayout from "@/components/layout/MainLayout"
 import AboutUs from "@/pages/about_us"
 import Home from "@/pages/home"
 import Login from "@/pages/login"
@@ -10,8 +11,8 @@ import Undefine from "@/pages/undefine"
 
 const Index = () => {
   return (
-    <>
-      <Routes>
+    <Routes>
+      <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/products" element={<Products />} />
@@ -19,9 +20,9 @@ const Index = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Registration />} />
-        <Route path="/undefine" element={<Undefine/>}/>
-      </Routes>
-    </>
+        <Route path="/undefine" element={<Undefine />} />
+      </Route>
+    </Routes>
   )
 }
 

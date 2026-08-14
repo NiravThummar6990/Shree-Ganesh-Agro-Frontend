@@ -1,4 +1,4 @@
-import Navigation from "@/components/home/Navigation"
+import PageContent from "@/components/layout/PageContent"
 import { useState } from "react"
 
 type Product = {
@@ -49,57 +49,45 @@ const Products = () => {
   const [products] = useState<Product[]>(sampleProducts)
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#f5f5f5]">
-      {/* Navigation */}
-      <div className="bg-[#15321a] shadow-lg">
-        <div className="mx-auto max-w-5xl px-4 py-3">
-          <Navigation />
-        </div>
+    <PageContent>
+      <div className="mb-8 text-center">
+        <h1 className="mb-2 text-3xl font-extrabold text-[#194023]">
+          Our Products
+        </h1>
+        <p className="mx-auto max-w-xl text-gray-700">
+          Browse our selection of high-quality agricultural products sourced
+          directly from local farmers for freshness and quality.
+        </p>
       </div>
-
-      {/* Products Content */}
-      <div className="flex flex-1 flex-col items-center justify-center p-4">
-        <div className="mb-8 text-center">
-          <h1 className="mb-2 text-3xl font-extrabold text-[#194023]">
-            Our Products
-          </h1>
-          <p className="mx-auto max-w-xl text-gray-700">
-            Browse our selection of high-quality agricultural products sourced
-            directly from local farmers for freshness and quality.
-          </p>
-        </div>
-        <div className="grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="flex flex-col overflow-hidden rounded-xl bg-white shadow-lg"
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="h-48 w-full object-cover"
-              />
-              <div className="flex flex-1 flex-col p-5">
-                <h2 className="mb-2 text-xl font-bold text-[#276132]">
-                  {product.name}
-                </h2>
-                <p className="mb-4 flex-1 text-gray-600">
-                  {product.description}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-[#194023]">
-                    ₹{product.price.toLocaleString()}
-                  </span>
-                  <button className="rounded-lg bg-[#276132] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#194023]">
-                    Add to Cart
-                  </button>
-                </div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {products.map((product) => (
+          <div
+            key={product.id}
+            className="flex flex-col overflow-hidden rounded-xl bg-white shadow-lg"
+          >
+            <img
+              src={product.image}
+              alt={product.name}
+              className="h-48 w-full object-cover"
+            />
+            <div className="flex flex-1 flex-col p-5">
+              <h2 className="mb-2 text-xl font-bold text-[#276132]">
+                {product.name}
+              </h2>
+              <p className="mb-4 flex-1 text-gray-600">{product.description}</p>
+              <div className="flex items-center justify-between">
+                <span className="text-lg font-semibold text-[#194023]">
+                  ₹{product.price.toLocaleString()}
+                </span>
+                <button className="rounded-lg bg-[#276132] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#194023]">
+                  Add to Cart
+                </button>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </div>
+    </PageContent>
   )
 }
 

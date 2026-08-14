@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { Menu, X, Search, ShoppingCart, User, ChevronDown } from "lucide-react"
 
 // If you have a logo file, import it here, e.g.:
@@ -55,6 +55,9 @@ const Navigation: React.FC<NavigationProps> = ({
   }
 
   const navigate = useNavigate()
+  const location = useLocation()
+
+  const isActive = (link: string) => location.pathname === link
 
   return (
     <header className="relative flex items-center justify-between gap-2 px-2">
@@ -71,15 +74,15 @@ const Navigation: React.FC<NavigationProps> = ({
       {/* Desktop Navigation */}
       <nav className="hidden lg:block">
         <ul className="flex items-center gap-5 text-[15px] font-medium text-white xl:gap-8">
-          {navItems.map((item, index) => (
+          {navItems.map((item) => (
             <li key={item.name} className="flex items-center gap-3">
-              {index === 0 && (
+              {isActive(item.link) && (
                 <span className="h-1.5 w-1.5 rounded-full bg-white"></span>
               )}
               <Link
                 to={item.link}
                 className={`whitespace-nowrap transition-all duration-300 hover:text-[#D6F2C2] ${
-                  item.name === "Home"
+                  isActive(item.link)
                     ? "font-semibold text-white"
                     : "text-white/80"
                 }`}
@@ -263,16 +266,16 @@ const Navigation: React.FC<NavigationProps> = ({
           )}
 
           <ul className="flex flex-col gap-4 text-[15px] font-medium text-white">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <li key={item.link} className="flex items-center gap-3">
-                {index === 0 && (
+                {isActive(item.link) && (
                   <span className="h-1.5 w-1.5 rounded-full bg-white"></span>
                 )}
                 <Link
                   to={item.link}
                   onClick={() => setIsMenuOpen(false)}
                   className={`transition-all duration-300 hover:text-[#D6F2C2] ${
-                    item.name === "Home"
+                    isActive(item.link)
                       ? "font-semibold text-white"
                       : "text-white/80"
                   }`}

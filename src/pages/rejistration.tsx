@@ -1,7 +1,8 @@
-import React, { useState } from "react"
+import PageContent from "@/components/layout/PageContent"
+import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
-const Registration: React.FC = () => {
+const Registration = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -28,7 +29,6 @@ const Registration: React.FC = () => {
       setError("Passwords do not match.")
       return
     }
-    // Normally, send data to backend.
     setSuccess(true)
     setTimeout(() => {
       navigate("/login")
@@ -36,8 +36,8 @@ const Registration: React.FC = () => {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#e7f4dd] px-4 py-10">
-      <div className="w-[95%] max-w-md rounded-xl bg-white p-7 shadow-xl">
+    <PageContent className="flex min-h-[calc(100vh-200px)] items-center">
+      <div className="mx-auto w-full max-w-md rounded-xl bg-white p-7 shadow-xl">
         <h2 className="mb-6 text-center text-2xl font-bold text-[#184023]">
           Registration
         </h2>
@@ -165,7 +165,7 @@ const Registration: React.FC = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </PageContent>
   )
 }
 
