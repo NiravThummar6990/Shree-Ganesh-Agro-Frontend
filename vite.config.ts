@@ -12,6 +12,6 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ["sink-flat-mesa-munich.trycloudflare.com"],
+    allowedHosts: ["hollywood-using-institutes-plot.trycloudflare.com"],
   },
 })

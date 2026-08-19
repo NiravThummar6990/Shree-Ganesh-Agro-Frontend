@@ -73,7 +73,7 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.85fr_1.15fr]">
             {/* Contact info — postcard style */}
-            <div className="flex flex-col justify-between rounded-2xl border border-dashed border-[#194023]/25 bg-white p-8 shadow-[0_4px_20px_rgba(22,59,34,0.08)]">
+            <div className="flex flex-col justify-between rounded border border-dashed border-[#194023]/25 bg-white px-4 py-8 shadow-[0_4px_20px_rgba(22,59,34,0.08)]">
               <div className="space-y-6">
                 <ContactRow
                   icon={<Mail className="h-5 w-5" />}
@@ -124,7 +124,7 @@ const Contact = () => {
             </div>
 
             {/* Form */}
-            <div className="rounded-2xl bg-white p-8 shadow-[0_4px_20px_rgba(22,59,34,0.08)]">
+            <div className="rounded bg-white p-8 shadow-[0_4px_20px_rgba(22,59,34,0.08)]">
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label

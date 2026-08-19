@@ -12,7 +12,7 @@ const MainLayout = () => {
       <div className="rounded-md border-2 border-[#BEBEBE] bg-[#276132] p-[4px] sm:p-[6px]">
         {!hideNavigation && (
           <div className="sticky top-[-1px] z-50">
-            <div className="bg-[#15321a] px-3 py-2 shadow-lg backdrop-blur sm:px-4 sm:py-3 md:px-5">
+            <div className="bg-gradient-to-r from-[#031C08] to-[#05340F] px-3 py-2 shadow-lg backdrop-blur sm:px-4 sm:py-3 md:px-5">
               <Navigation />
             </div>
           </div>

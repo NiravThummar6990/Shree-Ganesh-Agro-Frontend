@@ -125,7 +125,7 @@ const Navigation: React.FC<NavigationProps> = ({
         <Link
           to="/cart"
           aria-label="Cart"
-          className="relative rounded-full p-2 text-white transition-colors duration-300 hover:bg-white/10"
+          className="relative rounded-full p-2 text-white transition-colors duration-300 hover:bg-green-300/20"
         >
           <ShoppingCart className="h-5 w-5 sm:h-[22px] sm:w-[22px]" />
           {cartCount > 0 && (

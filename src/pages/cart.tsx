@@ -77,23 +77,24 @@ export default function Cart() {
 
   return (
     <PageContent>
-      <div className="min-h-screen bg-[#F3F7F2] px-4 py-10 sm:px-6 lg:px-10 lg:py-14">
+      <div className="min-h-screen bg-[#F3F7F2] px-4 py-10 sm:px-6 lg:px-10 lg:py-10">
         <div className="mx-auto max-w-6xl">
           {/* ================= HEADER ================= */}
-          <div className="mb-10 text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#276132]/15 bg-white px-4 py-2 shadow-sm">
-              <ShoppingBag className="h-4 w-4 text-[#B5651D]" />
-
-              <span className="font-['Inter'] text-xs font-semibold tracking-[0.18em] text-[#B5651D] uppercase">
-                Your Shopping Cart
-              </span>
-            </div>
-
-            <h1 className="font-['Fraunces'] text-4xl font-bold tracking-tight text-[#163B22] sm:text-5xl">
-              Review Your Cart
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <span className="mb-3 inline-block font-['Inter'] text-xs font-semibold tracking-[0.25em] text-[#B5651D] uppercase">
+              Your Shopping Cart
+            </span>
+            <h1 className="mb-4 font-['Fraunces'] text-4xl font-semibold text-[#163B22] sm:text-5xl">
+              Your Cart
             </h1>
-
-            <p className="mx-auto mt-3 max-w-xl font-['Inter'] text-sm leading-6 text-[#3A3229]/60 sm:text-base">
+            <div className="mx-auto mb-5 flex items-center justify-center gap-2">
+              <span className="h-1 w-1 rounded-full bg-[#D9A404]" />
+              <span className="h-1 w-1 rounded-full bg-[#D9A404]" />
+              <span className="h-6 w-6 rounded-full border border-dashed border-[#276132]" />
+              <span className="h-1 w-1 rounded-full bg-[#D9A404]" />
+              <span className="h-1 w-1 rounded-full bg-[#D9A404]" />
+            </div>
+            <p className="font-['Inter'] leading-relaxed text-[#3A3229]/80">
               Check your selected agricultural products before proceeding to
               checkout.
             </p>
