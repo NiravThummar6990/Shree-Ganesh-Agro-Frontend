@@ -12,6 +12,6 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ["metallica-newbie-mazda-invoice.trycloudflare.com"],
+    allowedHosts: ["sink-flat-mesa-munich.trycloudflare.com"],
   },
 })

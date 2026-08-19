@@ -6,8 +6,8 @@ import Products from "@/pages/products"
 import Contact from "@/pages/contact"
 import Cart from "@/pages/cart"
 import { Route, Routes } from "react-router-dom"
-import Registration from "@/pages/rejistration"
 import Undefine from "@/pages/undefine"
+import Registration from "@/pages/rejistration"
 
 const Index = () => {
   return (
